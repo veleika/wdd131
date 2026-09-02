@@ -1,152 +1,149 @@
 :root {
---primary-color: #003b5c;
---secondary-color: #005f73;
---accent-color: #ee9b00;
---background-color: #f4f4f4;
---text-color: #222;
---white: #ffffff;
+    --primary-color: #003b5c;
+    --secondary-color: #005f73;
+    --accent-color: #ee9b00;
+    --background-color: #f4f4f4;
+    --text-color: #222;
+    --white: #ffffff;
 }
 
 * {
-  box-sizing: border-box;
-  }
+    box-sizing: border-box;
+}
 
 body {
-margin: 0;
-font-family: "Roboto", sans-serif;
-color: var(--text-color);
-background-color: var(--background-color);
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 header {
-background-color: var(--primary-color);
-color: var(--white);
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 #course-title {
-display: block;
-text-align: center;
-padding: 1.5rem 1rem;
-font-family: "Roboto Slab", serif;
-font-size: 1.8rem;
-font-weight: 700;
+    display: block;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 nav {
-display: flex;
-justify-content: space-around;
-align-items: center;
-background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary-color);
 }
 
 nav a {
-color: var(--white);
-text-decoration: none;
-padding: 1rem;
-font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: 500;
 }
 
 nav a:hover {
-background-color: var(--accent-color);
-color: #000;
-text-decoration: underline;
+    background-color: var(--accent-color);
+    color: #000;
+    text-decoration: underline;
 }
 
 main {
-max-width: 900px;
-margin: 2rem auto;
-padding: 0 1rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 h1 {
-text-align: center;
-color: var(--primary-color);
-font-family: "Roboto Slab", serif;
-margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+    font-family: "Roboto Slab", serif;
+    margin-bottom: 2rem;
 }
 
 .card {
-display: grid;
-background-color: var(--white);
-border: 1px solid #ccc;
-border-radius: 8px;
-margin-bottom: 2rem;
-overflow: hidden;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card h2 {
-margin: 0;
-padding: 1rem;
-background-color: var(--primary-color);
-color: var(--white);
-text-align: center;
-font-family: "Roboto Slab", serif;
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    font-family: "Roboto Slab", serif;
 }
 
 .about-content {
-display: grid;
-grid-template-columns: 1fr 200px;
-gap: 2rem;
-padding: 1.5rem;
-align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 2rem;
+    padding: 1.5rem;
+    align-items: center;
 }
 
 .location-content {
-display: grid;
-grid-template-columns: 250px 1fr;
-gap: 2rem;
-padding: 1.5rem;
-align-items: center;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+    align-items: center;
 }
 
 .about-content img,
 .location-content img {
-width: 100%;
-height: auto;
-border-radius: 6px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
 }
 
 .card a {
-color: var(--primary-color);
-font-weight: 700;
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 .card a:hover {
-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 footer {
-background-color: var(--primary-color);
-color: var(--white);
-text-align: center;
-padding: 1.5rem;
-margin-top: 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
 }
 
 footer p {
-margin: 0.5rem;
+    margin: 0.5rem;
 }
 
 @media (max-width: 600px) {
-#course-title {
-font-size: 1.3rem;
-}
+    #course-title {
+        font-size: 1.3rem;
+    }
 
-```
-nav {
-    flex-direction: column;
-}
+    nav {
+        flex-direction: column;
+    }
 
-nav a {
-    width: 100%;
-    text-align: center;
-}
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
 
-.about-content,
-.location-content {
-    grid-template-columns: 1fr;
-}
-```
-
+    .about-content,
+    .location-content {
+        grid-template-columns: 1fr;
+    }
 }
