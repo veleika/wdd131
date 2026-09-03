@@ -2,101 +2,163 @@
 <html lang="en-US">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WDD 131 – Dynamic Web Fundamentals – Liekina Veleika</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Liekina Veleika</title>
 
-  <meta name="description"
-    content="WDD 131 – Dynamic Web Fundamentals – Liekina Veleika. A student webpage about web development, learning, Tonga, rugby, and leadership.">
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals – Liekina Veleika. A student home page featuring web development, HTML, CSS, JavaScript, and information about Tonga.">
 
-  <meta name="author" content="Liekina Veleika">
+    <meta name="author" content="Liekina Veleika">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap"
+        rel="stylesheet">
 
-  <!-- External CSS file -->
-  <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base.css">
 
-  <!-- External JavaScript file -->
-  <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
 
-  <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
 
-    <nav>
-      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
-      <a href="#">Final Project</a>
-    </nav>
-  </header>
+        <nav>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures"
+                target="_blank" rel="noopener noreferrer">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
 
-  <main>
+    <main>
 
-    <h1>Liekina Veleika</h1>
+        <h1>Liekina Veleika</h1>
 
-    <section class="card">
-      <h2>About Me</h2>
+        <div class="content-grid">
 
-      <img src="images/profile.jpg" alt="Liekina Veleika">
+            <div class="left-column">
 
-      <p>
-        Hello! My name is Liekina Veleika and I am from Tonga.
-        I am a student at Saineha High School. I enjoy playing volleyball
-        and also enjoy learning new skills, especially in technology and
-        web development.
-      </p>
+                <section class="card">
+                    <h2>About Me</h2>
 
-      <p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-          Learn more about HTML
-        </a>
-      </p>
-    </section>
+                    <div class="about-content">
+                        <img class="profile" src="images/profile.jpg" alt="Portrait of Liekina Veleika">
 
-    <section class="card">
-      <h2>Tonga</h2>
+                        <p>
+                            Hello! My name is Liekina Veleika and I am from Tonga.
+                            I am a student who enjoys learning new skills and developing
+                            my knowledge of technology and web development. I enjoy
+                            working with HTML, CSS, and JavaScript and look forward
+                            to creating useful and meaningful websites.
+                        </p>
 
-      <img src="images/tonga.jpg" alt="Beautiful coastal landscape in Tonga">
+                        <p>
+                            I also enjoy playing volleyball and spending time with
+                            family and friends. Learning new things and improving
+                            my skills are important goals for me.
+                        </p>
+                    </div>
 
-      <p>
-        Tonga is a beautiful island country in the South Pacific.
-        It is known for its rich Polynesian culture, beautiful islands,
-        strong traditions, and friendly people. Tonga has a unique history
-        and culture that I am proud to be part of.
-      </p>
+                    <div class="location">
+                        <h3>Tonga</h3>
 
-      <p>
-        <a href="https://www.tourismtonga.gov.to/" target="_blank">
-          Explore Tonga
-        </a>
-      </p>
+                        <div class="location-content">
+                            <figure>
+                                <img class="location-image" src="images/tonga.jpg"
+                                    alt="Beautiful coastal landscape in Tonga">
+                                <figcaption>Tonga – South Pacific</figcaption>
+                            </figure>
 
-      <p>
-        <a href="https://www.w3.org/" target="_blank">
-          Web Development Resources
-        </a>
-      </p>
-    </section>
+                            <div>
+                                <p>
+                                    Tonga is a beautiful island country in the South
+                                    Pacific. It is known for its rich Polynesian
+                                    culture, beautiful islands, strong traditions,
+                                    and friendly people.
+                                </p>
 
-  </main>
+                                <p>
+                                    Tonga has a unique history and culture that I am
+                                    proud to be part of.
+                                </p>
 
-  <footer>
-    <p>
-      &copy; <span id="currentyear"></span>
-      Liekina Veleika, Tonga
-    </p>
+                                <a href="https://www.tourismtonga.gov.to/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Explore Tonga
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-    <p id="lastModified"></p>
-  </footer>
+            </div>
+
+            <section class="card resources-card">
+                <h2>Web Dev Resources</h2>
+
+                <ul>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                            target="_blank" rel="noopener noreferrer">
+                            MDN HTML
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                            target="_blank" rel="noopener noreferrer">
+                            MDN CSS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                            target="_blank" rel="noopener noreferrer">
+                            MDN JavaScript
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.w3.org/"
+                            target="_blank" rel="noopener noreferrer">
+                            W3C
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.w3schools.com/"
+                            target="_blank" rel="noopener noreferrer">
+                            W3 Schools
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://css-tricks.com/"
+                            target="_blank" rel="noopener noreferrer">
+                            CSS-Tricks
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Liekina Veleika, Tonga
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
 
 </body>
+
 </html>
