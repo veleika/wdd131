@@ -55,12 +55,16 @@ header {
 ------------------------------ */
 
 #menu-button {
-    border: none;
-    background-color: transparent;
+    border: 0;
+    background-color: var(--primary-color);
     color: var(--white-color);
     font-size: 2rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
+}
+
+#menu-button:hover {
+    background-color: var(--secondary-color);
 }
 
 /* ------------------------------
@@ -81,6 +85,7 @@ nav.open {
 
 nav a {
     color: var(--white-color);
+    background-color: var(--primary-color);
     text-decoration: none;
     padding: 0.8rem;
     font-weight: 600;
@@ -172,3 +177,4 @@ footer p {
     margin: 0.4rem;
     font-size: 0.9rem;
 }
+```

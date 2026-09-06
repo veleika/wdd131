@@ -1,3 +1,4 @@
+```javascript
 // ------------------------------
 // Current Year
 // ------------------------------
@@ -20,22 +21,18 @@ document.querySelector("#lastModified").textContent =
 // ------------------------------
 
 const menuButton = document.querySelector("#menu-button");
-const navigation = document.querySelector("#navigation");
+const navigation = document.querySelector("nav");
 
 menuButton.addEventListener("click", () => {
-
     navigation.classList.toggle("open");
 
     const isOpen = navigation.classList.contains("open");
 
     menuButton.setAttribute("aria-expanded", isOpen);
 
-    if (isOpen) {
-        menuButton.textContent = "✕";
-        menuButton.setAttribute("aria-label", "Close navigation menu");
-    } else {
-        menuButton.textContent = "☰";
-        menuButton.setAttribute("aria-label", "Open navigation menu");
-    }
-
+    menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
 });
+```
