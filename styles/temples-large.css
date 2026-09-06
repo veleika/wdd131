@@ -1,0 +1,79 @@
+/* ------------------------------
+   Larger Screen Layout
+------------------------------ */
+
+@media screen and (min-width: 700px) {
+
+    /* Header */
+
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    header h2 {
+        font-size: 2rem;
+    }
+
+    /* Hide hamburger on larger screens */
+
+    #menu-button {
+        display: none;
+    }
+
+    /* Navigation */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        background-color: transparent;
+    }
+
+    nav a {
+        border: none;
+        padding: 0.7rem 1rem;
+        margin-left: 0.25rem;
+        border-radius: 4px;
+    }
+
+    /* Main */
+
+    main {
+        padding: 3rem 2rem;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Temple Grid */
+
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Images */
+
+    figure img {
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+    }
+}
+
+/* ------------------------------
+   Extra Large Screens
+------------------------------ */
+
+@media screen and (min-width: 1000px) {
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main h1 {
+        font-size: 2.75rem;
+    }
+}
