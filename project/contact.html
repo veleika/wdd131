@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Contact Discover Tonga to share your favorite Tongan place, food, activity, or cultural experience."
+    >
+    <meta name="author" content="Liekina Veleika">
+
+    <title>Discover Tonga | Contact</title>
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <a class="logo" href="index.html">Discover Tonga</a>
+
+            <button
+                id="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <nav id="navigation">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="references.html">References</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-banner">
+            <p class="eyebrow">Get in Touch</p>
+
+            <h1>Share Your Experience</h1>
+
+            <p>
+                Tell us about your favorite place, food, activity, or
+                experience in Tonga.
+            </p>
+        </section>
+
+        <section class="section contact-layout">
+
+            <div class="contact-information">
+
+                <p class="eyebrow">Connect</p>
+
+                <h2>Tell us what you love about Tonga</h2>
+
+                <p>
+                    Your ideas can help other people discover the beauty,
+                    culture, and experiences of Tonga.
+                </p>
+
+                <div class="contact-box">
+                    <h3>What can you share?</h3>
+
+                    <ul>
+                        <li>Your favorite place</li>
+                        <li>A traditional food you enjoy</li>
+                        <li>A cultural experience</li>
+                        <li>A memorable activity</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <form
+                id="contact-form"
+                method="get"
+                action="contact.html"
+            >
+
+                <div class="form-group">
+                    <label for="name">
+                        Name <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Email <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">
+                        Favorite topic
+                    </label>
+
+                    <select id="topic" name="topic">
+                        <option value="">Choose a topic...</option>
+                        <option value="culture">Culture</option>
+                        <option value="food">Food</option>
+                        <option value="places">Places</option>
+                        <option value="activities">Activities</option>
+                        <option value="history">History</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">
+                        Message <span class="required">*</span>
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="7"
+                        required
+                        placeholder="Write your message here..."
+                    ></textarea>
+                </div>
+
+                <label class="checkbox-label" for="updates">
+                    <input
+                        type="checkbox"
+                        id="updates"
+                        name="updates"
+                        value="yes"
+                    >
+                    I would like to receive future updates.
+                </label>
+
+                <button type="submit" class="button">
+                    Send Message
+                </button>
+
+                <p
+                    id="form-message"
+                    class="message"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>
+                &copy; <span id="currentyear"></span>
+                Liekina Veleika | Tonga
+            </p>
+
+            <div class="footer-links">
+                <a href="references.html">References</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+</html>

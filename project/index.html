@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Discover Tonga through its culture, food, beaches, traditions, and island experiences."
+    >
+    <meta name="author" content="Liekina Veleika">
+
+    <title>Discover Tonga | Home</title>
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <a class="logo" href="index.html">Discover Tonga</a>
+
+            <button
+                id="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <nav id="navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="contact.html">Contact</a>
+                <a href="references.html">References</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Welcome to Tonga</p>
+
+                <h1>Discover Tonga</h1>
+
+                <p>
+                    Explore the beauty, culture, food, traditions, and
+                    unforgettable island experiences of the Kingdom of Tonga.
+                </p>
+
+                <a href="explore.html" class="button">
+                    Explore Tonga
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Island Life</p>
+
+                <h2>Experience the beauty of Tonga</h2>
+
+                <p>
+                    Tonga is a Pacific island nation known for its welcoming
+                    people, rich culture, beautiful beaches, and strong
+                    traditions.
+                </p>
+            </div>
+
+            <div id="highlight-container" class="card-grid">
+                <article class="food-card">
+                    <h3>Rich Culture</h3>
+                    <p>
+                        Discover Tongan traditions, celebrations, music,
+                        dancing, and the importance of family and community.
+                    </p>
+                </article>
+
+                <article class="food-card">
+                    <h3>Beautiful Islands</h3>
+                    <p>
+                        Enjoy peaceful beaches, clear waters, tropical
+                        landscapes, and unforgettable island scenery.
+                    </p>
+                </article>
+
+                <article class="food-card">
+                    <h3>Traditional Food</h3>
+                    <p>
+                        Experience traditional Tongan dishes and learn about
+                        foods that are an important part of island life.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section favorite-section">
+            <div class="section-heading">
+                <p class="eyebrow">Your Favorite</p>
+
+                <h2>Choose what interests you most</h2>
+
+                <p>
+                    Select a topic to discover more about Tonga.
+                </p>
+            </div>
+
+            <div class="favorite-controls">
+                <label for="favorite-select">
+                    Choose a topic
+                </label>
+
+                <select id="favorite-select">
+                    <option value="">Select a topic...</option>
+                    <option value="culture">Culture</option>
+                    <option value="food">Food</option>
+                    <option value="places">Places</option>
+                    <option value="activities">Activities</option>
+                </select>
+
+                <button
+                    type="button"
+                    id="favorite-button"
+                    class="button"
+                >
+                    Show Information
+                </button>
+
+                <p
+                    id="favorite-message"
+                    class="message"
+                    aria-live="polite"
+                ></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>
+                &copy; <span id="currentyear"></span>
+                Liekina Veleika | Tonga
+            </p>
+
+            <div class="footer-links">
+                <a href="references.html">References</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+</html>
