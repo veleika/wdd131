@@ -1,0 +1,276 @@
+:root {
+--primary-color: #003b5c;
+--secondary-color: #005f73;
+--accent-color: #ee9b00;
+--background-color: #f4f7f8;
+--card-color: #ffffff;
+--text-color: #222222;
+--border-color: #9aa6ad;
+--required-color: #b00020;
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+margin: 0;
+background-color: var(--background-color);
+color: var(--text-color);
+line-height: 1.5;
+}
+
+header {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 1rem;
+}
+
+header h1 {
+margin: 0;
+font-size: 2rem;
+}
+
+main {
+width: min(100% - 2rem, 750px);
+margin: 2rem auto;
+}
+
+form {
+background-color: var(--card-color);
+padding: 1.5rem;
+border-radius: 10px;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+fieldset {
+border: 1px solid var(--border-color);
+border-radius: 8px;
+margin: 0 0 1.5rem;
+padding: 1.25rem;
+}
+
+legend {
+background-color: var(--primary-color);
+color: white;
+padding: 0.4rem 0.8rem;
+border-radius: 5px;
+font-weight: bold;
+}
+
+label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: bold;
+}
+
+.required {
+color: var(--required-color);
+font-weight: bold;
+}
+
+.required-note {
+font-size: 0.9rem;
+margin-bottom: 0;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+width: 100%;
+padding: 0.75rem;
+border: 1px solid #66757f;
+border-radius: 5px;
+background-color: white;
+color: var(--text-color);
+font: inherit;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+outline: 3px solid var(--accent-color);
+outline-offset: 2px;
+}
+
+textarea {
+resize: vertical;
+min-height: 120px;
+}
+
+.rating {
+display: flex;
+justify-content: space-between;
+gap: 0.5rem;
+margin-top: 1rem;
+}
+
+.rating label {
+display: flex;
+flex-direction: column;
+align-items: center;
+cursor: pointer;
+font-weight: normal;
+padding: 0.5rem;
+border-radius: 6px;
+}
+
+.rating label:hover {
+background-color: #eef5f7;
+}
+
+.rating input {
+margin-bottom: 0.3rem;
+}
+
+.rating span {
+color: var(--accent-color);
+font-size: 1.5rem;
+letter-spacing: -0.2rem;
+}
+
+.rating small {
+color: var(--text-color);
+font-weight: bold;
+}
+
+.checkbox-group {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 0.75rem;
+}
+
+.checkbox-group label {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-weight: normal;
+padding: 0.5rem;
+}
+
+.checkbox-group input {
+width: 1.1rem;
+height: 1.1rem;
+}
+
+.submit-button {
+display: block;
+width: 100%;
+border: none;
+border-radius: 6px;
+padding: 0.9rem;
+background-color: var(--secondary-color);
+color: white;
+font-size: 1.1rem;
+font-weight: bold;
+cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+background-color: var(--primary-color);
+outline: 3px solid var(--accent-color);
+outline-offset: 2px;
+}
+
+footer {
+background-color: var(--primary-color);
+color: white;
+text-align: center;
+padding: 1.5rem 1rem;
+margin-top: 2rem;
+}
+
+footer p {
+margin: 0.4rem;
+}
+
+.confirmation {
+min-height: 60vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.confirmation-card {
+width: 100%;
+background-color: var(--card-color);
+padding: 2.5rem 2rem;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.confirmation-card h2 {
+color: var(--primary-color);
+font-size: 2rem;
+margin-top: 0;
+}
+
+.review-count {
+margin: 2rem 0;
+font-size: 1.2rem;
+}
+
+.back-button {
+display: inline-block;
+background-color: var(--secondary-color);
+color: white;
+text-decoration: none;
+padding: 0.8rem 1.2rem;
+border-radius: 6px;
+font-weight: bold;
+}
+
+.back-button:hover,
+.back-button:focus {
+background-color: var(--primary-color);
+outline: 3px solid var(--accent-color);
+outline-offset: 2px;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+header h1 {
+font-size: 1.6rem;
+}
+
+
+main {
+    width: min(100% - 1rem, 750px);
+    margin: 1rem auto;
+}
+
+form {
+    padding: 1rem;
+}
+
+fieldset {
+    padding: 1rem;
+}
+
+.rating {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rating label {
+    min-width: 55px;
+}
+
+.checkbox-group {
+    grid-template-columns: 1fr;
+}
+
+.confirmation-card {
+    padding: 2rem 1rem;
+}
+
+
+}
