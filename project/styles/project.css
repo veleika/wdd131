@@ -31,6 +31,10 @@ img {
     height: auto;
 }
 
+a {
+    color: inherit;
+}
+
 button,
 input,
 select,
@@ -38,8 +42,10 @@ textarea {
     font: inherit;
 }
 
-a {
-    color: inherit;
+/* Header */
+header {
+    background-color: var(--primary);
+    color: var(--white);
 }
 
 .header-container {
@@ -50,11 +56,6 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-}
-
-header {
-    background-color: var(--primary);
-    color: var(--white);
 }
 
 .logo {
@@ -94,11 +95,12 @@ nav a.active {
     cursor: pointer;
 }
 
+/* Main */
 main {
     min-height: 70vh;
 }
 
-/* Hero */
+/* Home hero */
 .hero {
     min-height: 550px;
     padding: 3rem 1rem;
@@ -128,6 +130,7 @@ main {
     font-size: 1.2rem;
 }
 
+/* General text */
 .eyebrow {
     margin: 0 0 0.5rem;
     color: var(--accent);
@@ -136,6 +139,18 @@ main {
     letter-spacing: 0.08rem;
 }
 
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+/* Buttons */
 .button {
     display: inline-block;
     margin-top: 1rem;
@@ -156,22 +171,11 @@ main {
     outline-offset: 2px;
 }
 
-/* General sections */
+/* Sections */
 .section {
     width: min(100% - 2rem, 1100px);
     margin: 0 auto;
     padding: 4rem 0;
-}
-
-h1,
-h2,
-h3 {
-    line-height: 1.2;
-}
-
-h2 {
-    color: var(--primary);
-    font-size: 2rem;
 }
 
 .section-heading {
@@ -182,26 +186,6 @@ h2 {
 
 .section-heading .eyebrow {
     color: var(--secondary);
-}
-
-/* Introduction */
-.introduction {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    align-items: center;
-}
-
-.fact-box {
-    padding: 2rem;
-    border-radius: 10px;
-    background-color: var(--primary);
-    color: var(--white);
-}
-
-.fact-box h2 {
-    margin-top: 0;
-    color: var(--white);
 }
 
 /* Cards */
@@ -227,7 +211,18 @@ h2 {
     color: var(--primary);
 }
 
-/* Favorite form section */
+.food-card {
+    padding: 1.5rem;
+    border-left: 5px solid var(--accent);
+    background-color: var(--background);
+}
+
+.food-card h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+/* Favorite section */
 .favorite-section {
     width: 100%;
     max-width: none;
@@ -241,18 +236,7 @@ h2 {
     color: var(--white);
 }
 
-.favorite-form {
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.favorite-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-.favorite-form select {
+.favorite-section select {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid var(--border);
@@ -264,7 +248,7 @@ h2 {
     font-weight: bold;
 }
 
-/* Page banner */
+/* Explore page */
 .page-banner {
     padding: 4rem 1rem;
     text-align: center;
@@ -277,22 +261,11 @@ h2 {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
 }
 
-/* Two-column content */
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
-}
-
-.image-container {
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.image-container img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
 }
 
 .feature-list {
@@ -303,35 +276,15 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-/* Food */
 .food-section {
     width: 100%;
     max-width: none;
+    background-color: var(--white);
     padding-left: max(1rem, calc((100% - 1100px) / 2));
     padding-right: max(1rem, calc((100% - 1100px) / 2));
-    background-color: var(--white);
 }
 
-.food-grid {
-    width: min(100%, 1100px);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.food-card {
-    padding: 1.5rem;
-    border-left: 5px solid var(--accent);
-    background-color: var(--background);
-}
-
-.food-card h3 {
-    margin-top: 0;
-    color: var(--primary);
-}
-
-/* Contact */
+/* Contact page */
 .contact-layout {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -429,7 +382,7 @@ footer {
     color: var(--accent);
 }
 
-/* Tablet and mobile */
+/* Responsive navigation */
 @media screen and (max-width: 800px) {
     #menu-button {
         display: block;
@@ -455,25 +408,23 @@ footer {
         text-align: center;
     }
 
-    .introduction,
     .two-column,
     .contact-layout {
         grid-template-columns: 1fr;
     }
 
-    .card-grid,
-    .food-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
+/* Small screens */
 @media screen and (max-width: 550px) {
     .section {
         padding: 3rem 0;
     }
 
-    .card-grid,
-    .food-grid {
+    .card-grid {
         grid-template-columns: 1fr;
     }
 
