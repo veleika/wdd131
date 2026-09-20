@@ -6,6 +6,8 @@
     --card-color: #ffffff;
     --border-color: #cccccc;
     --shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    --content-width: 1200px;
+    --section-gap: 2rem;
 }
 
 * {
@@ -24,7 +26,7 @@ header {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
-    padding: 1rem;
+    padding: 1.25rem;
     border-bottom: 5px solid var(--dark-color);
 }
 
@@ -32,12 +34,15 @@ header h1 {
     margin: 0;
     font-family: "Roboto Slab", Georgia, serif;
     font-size: 2.2rem;
+    line-height: 1.2;
 }
 
 main {
     width: 100%;
     margin: 0 auto;
 }
+
+/* HERO */
 
 .hero {
     width: 100%;
@@ -54,14 +59,19 @@ main {
     height: auto;
 }
 
+/* INFORMATION AREA */
+
 .information {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    max-width: 1200px;
+    gap: var(--section-gap);
+    width: 100%;
+    max-width: var(--content-width);
     margin: 0 auto;
+    padding: 2rem 1.5rem;
 }
+
+/* CARDS */
 
 .card {
     background-color: var(--card-color);
@@ -73,24 +83,26 @@ main {
 
 .card h2 {
     margin: 0;
-    padding: 0.75rem 1rem;
+    padding: 0.8rem 1rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-family: "Roboto Slab", Georgia, serif;
     font-size: 1.5rem;
+    line-height: 1.3;
     text-align: center;
 }
 
 .card dl {
     margin: 0;
-    padding: 1.25rem;
+    padding: 1.5rem;
 }
 
 .card dl div {
     display: grid;
     grid-template-columns: 140px 1fr;
-    gap: 0.75rem;
-    margin-bottom: 0.6rem;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .card dl div:last-child {
@@ -106,24 +118,27 @@ main {
     margin: 0;
 }
 
+/* MOBILE WEATHER ICON */
+
 .weather-icon {
     display: block;
     width: 70px;
     height: 70px;
-    margin: 1rem auto 0.25rem;
+    margin: 1rem auto 0.5rem;
 }
+
+/* FOOTER */
 
 footer {
     background-color: var(--dark-color);
     color: var(--secondary-color);
     text-align: center;
-    padding: 1rem;
+    padding: 1.25rem;
 }
 
 footer p {
     margin: 0.25rem;
 }
-
 
 /* ========================================
    WIDER VIEW
@@ -132,7 +147,7 @@ footer p {
 @media screen and (min-width: 601px) {
 
     header {
-        padding: 1.25rem;
+        padding: 1.5rem;
     }
 
     header h1 {
@@ -146,16 +161,22 @@ footer p {
 
     .information {
         grid-template-columns: 1fr 1fr;
-        align-items: start;
-        padding: 2rem;
-        gap: 2rem;
+        align-items: stretch;
+        gap: var(--section-gap);
+        padding: 2.5rem 2rem;
     }
 
     .card {
         min-height: 350px;
+        display: flex;
+        flex-direction: column;
     }
 
-    /* Hide the mobile weather SVG on wider screens */
+    .card dl {
+        flex: 1;
+    }
+
+    /* Hide mobile SVG on wider screens */
     .weather-icon {
         display: none;
     }
@@ -166,7 +187,6 @@ footer p {
         margin-left: 0.5rem;
     }
 }
-
 
 /* ========================================
    MOBILE VIEW
@@ -180,11 +200,22 @@ footer p {
     }
 
     .information {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .card dl {
+        padding: 1.25rem;
     }
 
     .card dl div {
-        grid-template-columns: 120px 1fr;
+        grid-template-columns: 110px 1fr;
+        gap: 0.75rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .card dt {
+        text-align: right;
     }
 
     .weather-icon {
